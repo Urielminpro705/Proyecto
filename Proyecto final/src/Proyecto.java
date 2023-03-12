@@ -36,7 +36,7 @@ public class Proyecto{
                                 do{
                                     opcion3=menuOrdenadores2();
                                     switch(opcion3){
-                                        case 1: 
+                                        case 1:  
                                             burbuja(coches, pos);
                                             opcion3=0;
                                             break;
