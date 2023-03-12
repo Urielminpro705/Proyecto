@@ -154,7 +154,7 @@ public class Proyecto{
                 case 4:
                     encontrado=buscador(coches, pos);
                     if(encontrado!=-1){
-                        imprimir(coches, 1, encontrado);
+                        imprimir(coches, (encontrado+1), encontrado);
                         editar(coches, encontrado);
                     }
                     else{
