@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class Proyecto{
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
+        double inicio, fin;
         int n=1, i=0, opcion, opcion2, opcion3, encontrado, pos=5;
         System.out.println("Introduce el numero de autos");
         n=input.nextInt();
@@ -37,17 +38,26 @@ public class Proyecto{
                                     opcion3=menuOrdenadores2();
                                     switch(opcion3){
                                         case 1:  
+                                            inicio=System.nanoTime();
                                             burbuja(coches, pos);
+                                            fin=System.nanoTime()-inicio;
+                                            System.out.println("El tiempo de ordenamiento fue de: " + fin + " nanosegundos");
                                             opcion3=0;
                                             break;
                 
                                         case 2:
+                                            inicio=System.nanoTime();
                                             seleccion(coches, pos);
+                                            fin=System.nanoTime()-inicio;
+                                            System.out.println("El tiempo de ordenamiento fue de: " + fin + " nanosegundos");
                                             opcion3=0;
                                             break;
                 
                                         case 3:
+                                            inicio=System.nanoTime();
                                             insercion(coches, pos);
+                                            fin=System.nanoTime()-inicio;
+                                            System.out.println("El tiempo de ordenamiento fue de: " + fin + " nanosegundos");
                                             opcion3=0;
                                             break;
                 
@@ -65,17 +75,26 @@ public class Proyecto{
                                     opcion3=menuOrdenadores2();
                                     switch(opcion3){
                                         case 1: 
+                                            inicio=System.nanoTime();
                                             burbuja2(coches, pos);
+                                            fin=System.nanoTime()-inicio;
+                                            System.out.println("El tiempo de ordenamiento fue de: " + fin + " nanosegundos");
                                             opcion3=0;
                                             break;
                 
                                         case 2:
+                                            inicio=System.nanoTime();
                                             seleccion2(coches, pos);
+                                            fin=System.nanoTime()-inicio;
+                                            System.out.println("El tiempo de ordenamiento fue de: " + fin + " nanosegundos");
                                             opcion3=0;
                                             break;
                 
                                         case 3:
+                                            inicio=System.nanoTime();
                                             insercion2(coches, pos);
+                                            fin=System.nanoTime()-inicio;
+                                            System.out.println("El tiempo de ordenamiento fue de: " + fin + " nanosegundos");
                                             opcion3=0;
                                             break;
                 
@@ -93,17 +112,26 @@ public class Proyecto{
                                     opcion3=menuOrdenadores2();
                                     switch(opcion3){
                                         case 1: 
+                                            inicio=System.nanoTime();
                                             burbuja3(coches, pos);
+                                            fin=System.nanoTime()-inicio;
+                                            System.out.println("El tiempo de ordenamiento fue de: " + fin + " nanosegundos");                                           
                                             opcion3=0;
                                             break;
                 
                                         case 2:
+                                            inicio=System.nanoTime();
                                             seleccion3(coches, pos);
+                                            fin=System.nanoTime()-inicio;
+                                            System.out.println("El tiempo de ordenamiento fue de: " + fin + " nanosegundos");                                    
                                             opcion3=0;
                                             break;
                 
                                         case 3:
+                                            inicio=System.nanoTime();
                                             insercion3(coches, pos);
+                                            fin=System.nanoTime()-inicio;
+                                            System.out.println("El tiempo de ordenamiento fue de: " + fin + " nanosegundos");                                           
                                             opcion3=0;
                                             break;
                 
@@ -256,20 +284,7 @@ public class Proyecto{
             i++;
         }
     }
-
-    /*public static void imprimirUno(Coche [] c, int pos){
-        System.out.println("\nAño\tAntiguo dueño\tMarca\tModelo\tPlaca del auto\tKilometraje\tPrecio");
-        for(int i=0;i<1;i++){ 
-            System.out.print(c[pos].año + "\t");
-            System.out.print(c[pos].ultimoDueño + "\t");
-            System.out.print(c[pos].marca + "\t");
-            System.out.print(c[pos].modelo + "\t");
-            System.out.print(c[pos].placa + "\t");
-            System.out.print(c[pos].kilometraje + "\t\t");
-            System.out.println(c[pos].precio);
-        }
-    }*/
-
+   
     public static void burbuja(Coche[] c, int pos){
         
         for(int i=0;i<pos-1;i++){
